@@ -24,7 +24,7 @@ fn main() {
         if let Some(Button::Keyboard(key)) = event.press_args() {
             game.key_pressed(key);
         }
-        window.draw_2d(&event, |context, graphics| {
+        window.draw_2d(&event, |context, graphics, _| {
             clear(BACKGROUND_COLOR, graphics);
             game.draw(&context, graphics);
         });
